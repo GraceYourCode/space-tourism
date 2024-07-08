@@ -25,8 +25,6 @@ const NavBar = ({image,}: {image: StaticImport}) => {
   const handleNavPag = (num: Nav) => {
     setNavPag(num);
     setIsOpen(!isOpen);
-
-    console.log(num);
   };
 
   const navList: NavigationItem[] = [
