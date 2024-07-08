@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding:0 ;
+  /* overflow-x: hidden; */
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0B0D17;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-up-down {
+  animation: move-up-down 2s ease-in-out infinite; 
+}
+
+.rotate {
+  animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
