@@ -29,14 +29,12 @@ const NavBar = ({image,}: {image: StaticImport}) => {
 
   const navList: NavigationItem[] = [
     { label: '00 Home', path: "/" },
-    { label: '01 Destination', path: "destination" },
-    { label: '02 Crew', path: "crew" },
-    { label: '03 Technology', path: "technology" },
+    { label: '01 Destination', path: "/destination" },
+    { label: '02 Crew', path: "/crew" },
+    { label: '03 Technology', path: "/technology" },
   ];
 
-  const handleNavToggle = (): void => {
-    setIsOpen(!isOpen);
-  };
+  const handleNavToggle = (): void => setIsOpen(!isOpen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,7 +79,7 @@ const NavBar = ({image,}: {image: StaticImport}) => {
           <ul className="flex max-[765px]:flex-col max-[765px]:gap-8 max-[765px]:justify-center max-[765px]:translate-y-[8rem] max-[765px]:ml-[3rem] tracking-[2px] text-[#b1a3a3] min-[768px]:gap-[3rem]">
             {navList.map((item, i) => (
               <Link
-                href={`/${item.path}`}
+                href={item.path as string}
                 key={item.label}
                 onClick={() => handleNavPag(i)}
               >

@@ -101,7 +101,7 @@ const DestinationBody = () => {
                 </span>
                 <span className="text-center  min-[1100px]:text-left">
                   <h2 className="uppercase tracking-[2px] ">
-                    Est. travel timece
+                    Est. travel time
                   </h2>
                   <h1 className="text-[28px] font-[Bellefair] uppercase">
                     {destinationData.travel}
